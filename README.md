@@ -1,17 +1,43 @@
 # Mortgage Calculator
 
-This repository contains a **Mortgage Calculator** implemented in a Jupyter Notebook (Google Colab compatible).  
-It allows users to compute monthly payments, total repayment, and interest over the lifetime of a loan, given parameters such as principal, annual interest rate, and loan duration.
+This repository contains a **Mortgage Calculator** implemented as a Jupyter Notebook (Google Colab compatible).  
+It is designed to calculate mortgage installments, generate a full amortization schedule, and visualize the repayment process in a clear and structured way.  
+The code is fully commented and can be adapted to different loan scenarios.
 
 ---
 
-## Features
-- Calculate monthly mortgage payments based on:
-  - Loan amount (principal)
-  - Annual interest rate
-  - Loan duration (years)
-- Display total repayment and total interest paid.
-- Clean and simple implementation, easy to adapt.
+## Features (Detailed)
+
+- **Monthly Installment Calculation**
+  - Uses the annuity formula to compute constant monthly payments.
+  - Based on:
+    - Loan amount (*principal*)
+    - Annual interest rate
+    - Loan duration (*years*).
+
+- **Amortization Schedule**
+  - Builds a full table with:
+    - Total installment (constant each month)
+    - Portion of installment used for interest repayment
+    - Portion of installment used for principal repayment
+    - Remaining principal balance
+    - Remaining total interest over the loan.
+
+- **Financial Summary**
+  - Calculates:
+    - Constant monthly installment
+    - Total interest paid over the loan
+    - Total repayment (principal + interest).
+
+- **Visualization**
+  - Generates a line chart (via `matplotlib`) to show:
+    - Decline of the outstanding principal
+    - Cumulative interest evolution.
+  - Helps users *see* the dynamics of their mortgage over time.
+
+- **Flexibility**
+  - Code can be adapted to test different loan sizes, durations, or interest rates.
+  - Easy to extend with more financial features.
 
 ---
 
@@ -22,10 +48,10 @@ You can open the notebook directly in Colab without installing anything locally:
 
 ---
 
-## ⚙Local Installation (Optional)
-If you prefer to run the notebook locally:
+## Run Locally (Optional)
 
-1. Clone this repository:
+If you prefer running the notebook on your machine:
+
+1. **Clone this repository**
    ```bash
    git clone https://github.com/<your-username>/<your-repo>.git
-
